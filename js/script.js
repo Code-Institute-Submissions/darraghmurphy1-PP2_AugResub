@@ -1,41 +1,50 @@
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 let answerButtons = document.getElementsByClassName('answer-btn');
+let startingScore = 0;
+let startingIncorrectScore=0;
+let currentQuestionIndex=0;
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getElementById("start-btn") === "start") {
-                alert("You clicked Start!");
-            } 
-        });
-    }
-});
 
 /* adding an event listener for the start button */
 
-startButton.addEventListener('click', startQuiz);
+document.startButton.addEventListener('click', startQuiz);
 
 function startQuiz () {
-  
+  startButton.classList.add('hidden')
+  currentQuestionIndex = 0
+  questionContainerElement.classList.remove('hidden')
+  nextQuestion()
 }
 
-function nextQuestion ()
+function nextQuestion () {
 
-function displayQuestion ()
+};
 
-function checkAnswer ()
+function displayQuestion () {
 
-function incrementScore()
+};
 
-function incrementIncorrectScore ()
+function checkAnswer () {
 
-function calculateFinalResults ()
+};
 
-function retry ()
+function incrementScore() {
+
+};
+
+function incrementIncorrectScore () {
+
+};
+
+function calculateFinalResults () {
+
+};
+
+function retry () {
+
+};
 
 /* questions for the quiz */
 
