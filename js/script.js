@@ -1,99 +1,18 @@
-const question = document.getElementsById('question');
-const choices = array.from(document.getElementsByClassName('answer-text'));
-
-let thisQuestion = {}
-let correctAnswer = true
-let startingScore = 0
-let questionTrack = 0
-let theQuestions = []
-
-
-
+/*some of the main variables */
+const rulesButton = document.getElementById('rules-btn');
+const questionArea = document.getElementById('questionarea');
+const ruleBox = document.getElementById('instructions');
 const startButton = document.getElementById('start-btn');
-const nextButton = document.getElementById('next-btn');
-let answerButtons = document.getElementsByClassName('answer-btn');
-
-let startingIncorrectScore=0;
-let currentQuestionIndex=0;
 
 
+/* function to get the rules to pop up on button click */
+rulesButton.addEventListener('click', function() {
+  ruleBox.setAttribute('class', 'the-rules');
+  console.log('success');
+})
 
-/* adding an event listener for the start button */
 
-document.startButton.addEventListener('click', startQuiz);
 
-function startQuiz () {
-  questionTrack=0
-  startingScore=0
-  theQuestions= [...questions]
-  nextQuestion()
-}
-
-function nextQuestion () {
-  const questionsIndex = Math.floor(Math.random() * theQuestions.length)
-  thisQuestion =  theQuestions[questionsIndex]
-  question.innerText = thisQuestion.question
-  
-  answers.forEach(answer => {
-    const number = choice.dataset['number']
-    answer.innerText = thisQuestion ['answer' + number]
-
-    theQuestions.splice(questionsIndex, 1)
-
-    acceptedAnswers = true
-
-    answers.forEach(answer => {
-      answer.addEventListener('click' e => {
-        if(!acceptedAnswers) return
-
-        acceptedAnswers = false 
-        const selectedOption = e.target
-        const selectedAnswer = selectedOption.dataset['number']
-        
-
-        let classToApply = selectedAnswer == thisQuestion.answer ? 'correct' : 'incorrect'
-
-        if (classToApply=== 'correct') {
-        
-          incrementScore(SCORE_POINTS)  /* not defined yet */
-        }
-
-        selectedOption.parentElement.classList.add(classToApply)
-
-        setTimeout (() => {
-          selectedOption.parentElement.classList.remove(classToApply)
-          newQuestion()
-        }, 1000)
-
-  })
-    })
-
-  })
-};
-
-function newQuestion () {
-
-};
-
-function checkAnswer () {
-
-};
-
-function incrementScore()= num =>  {
-
-};
-
-function incrementIncorrectScore () {
-
-};
-
-function calculateFinalResults () {
-
-};
-
-function retry () {
-
-};
 
 /* questions for the quiz */
 

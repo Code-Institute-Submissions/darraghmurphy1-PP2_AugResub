@@ -10,6 +10,40 @@ body {
     font-family: sans-serif;
 }
 
+.the-rules {
+    color: white;
+    background-color: pink;
+    font-family: sans-serif;
+}
+
+.rules-box {
+    font-size: 12pt;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border:4px white solid;
+    background-color: green;
+    width: 320px;
+    color: white;
+
+}
+
+.rules-header {
+    font-size: 18pt;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: white solid 2px;
+    color: white;
+
+}
+
+.hide {
+	display: none;
+}
+
+
 h1 {
     font-size:18pt;
     color: white;
