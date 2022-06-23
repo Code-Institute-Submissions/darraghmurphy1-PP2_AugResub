@@ -11,6 +11,14 @@ rulesButton.addEventListener('click', function() {
   console.log('success');
 })
 
+/* function to start the quiz after reading rules */
+
+startButton.addEventListener('click', function() {
+  ruleBox.classList.remove('the-rules');
+  questionArea.setAttribute('class', 'question-container');
+  ruleBox.classList.add("hide");
+})
+
 
 
 
