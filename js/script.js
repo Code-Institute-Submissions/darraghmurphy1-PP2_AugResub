@@ -3,7 +3,7 @@ const rulesButton = document.getElementById('rules-btn');
 const questionArea = document.getElementById('questionarea');
 const ruleBox = document.getElementById('instructions');
 const startButton = document.getElementById('start-btn');
-
+const TIMEOUT = 300;
 
 /* function to get the rules to pop up on button click */
 rulesButton.addEventListener('click', function() {
@@ -17,8 +17,24 @@ startButton.addEventListener('click', function() {
   ruleBox.classList.remove('the-rules');
   questionArea.setAttribute('class', 'question-container');
   ruleBox.classList.add("hide");
+  secondTimer = TIMEOUT;
 })
 
+
+/* 5 MIMUTE TIMER FOR THE QUIZ */
+
+const clock = document.querySelector('h2');
+let secondTimer = TIMEOUT;
+
+clock.innerHTML = secondTimer;
+
+setInterval(() => {
+  secondTimer--;
+  clock.innerHTML = `${secondTimer} seconds left.`;
+  if (secondTimer <= 0) {
+    runFinalScore(); // function to display the final score if and when the clock reaches 0. 
+  }
+}, 1000);
 
 
 
