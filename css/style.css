@@ -7,7 +7,11 @@ body {
     margin: 0;
     padding: 0;
     font-size: 12pt;
+    background-color: white;
+    color: black;
     font-family: sans-serif;
+    align-items: center;
+    text-align: center;
 }
 
 .the-rules {
@@ -29,87 +33,10 @@ body {
 
 }
 
-.rules-header {
-    font-size: 18pt;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: white solid 2px;
-    color: white;
-
-}
 
 .hide {
 	display: none;
+   
 }
 
 
-h1 {
-    font-size:18pt;
-    color: white;
-    text-align: center;
-}
-
-.container {
-    width:100vw;
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1080px;
-    margin: 0;
-}
-
-.hidden {
-    display: none;
-}
-
-.homescreen {
-    display:flex;
-    text-align:center;
-}
-
-.btn {
-    font-size:12pt;
-    width:320px;
-    text-align: center;
-    text-decoration: none;
-    color: green;
-    background: white;
-    padding: 0;
-    margin-bottom: 20%;
-
-}
-
-.btn:hover {
-    cursor: pointer;
-}
-
-.answer-btn-grid {
-    background: white;
-    width: 100%;
-    font-size: 10pt;
-    display:flex;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-.answer-btn-grid:hover {
-    cursor:pointer;
-    transform:5%;
-}
-
-.answer-option {
-    color: green;
-}
-.answer-text {
-    color: green;
-}
-
-.correct {
-    background: green;
-}
-
-.incorrect {
-    background: red;
-}

@@ -10,10 +10,10 @@
 </head>
 
 <body>
-  <section>
+<section>
 
   
-<div class="container">
+ <div class="container">
 
 
   <button id="rules-btn" class="rules-button">Rules</button>
@@ -28,8 +28,11 @@
         <li>Use your mouse to select your answer or tap your answer on your touch screen.</li> 
         <li>You cannot pass on a question and must answer the current question to move onto the next one.</li> 
         <li>Enjoy the quiz and feel free to retry!</li>          
-</ul>
-      <button class="start-btn" id="start-btn">Begin!</button>
+      </ul>
+      <div class="buttonstart">
+
+      <button class="start-btn" id="start-btn" onclick=" displayQuestion(questions, questionNumber)">Begin!</button>
+      </div>
     
     </div>
   
@@ -37,44 +40,35 @@
   <div class="quesionarea" id="questionarea">
 
   <div class="question-container">
-
+    <div class="question-header">
+      <h2>Welcome to the Sports Quiz</h2>
+    </div>
     <div class="timer">
       <h2>Time Remaining: </h2>
     </div>
+    <div id="question">
+    </div>
+    <div id="answer">
+    </div>
+    <div class="nextbutton">
+    <button id="next-btn" class="next-click">
+    </div>
+    <div class="scoreboard">
+      <p class="plusone">Correct
+        <span id="correct">
+          0
+        </span>
+      </p>
+      <p class="minusone">Incorrect
+        <span id="incorrect">
+          0
+        </span>
+      </p>
+    </div>
 
 
   </div>
-</div>
-    <div id="full-quiz" class="home">
-      <h1 id="questions">Question</h1>
 
-
-      <div id="answer-buttons" class="answer-btn-grid">
-        <p class="answer-option">A)</p>
-        <p class="answer-text" data-number="1">1</p>
-      </div>
-
-      <div id="answer-buttons" class="answer-btn-grid">
-        <p class="answer-option">B)</p>
-        <p class="answer-text" data-number="2">2</p>
-      </div>
-
-      <div id="answer-buttons" class="answer-btn-grid">
-        <p class="answer-option">C)</p>
-        <p class="answer-text" data-number="3">3</p>
-      </div>
-
-      <div id="answer-buttons" class="answer-btn-grid">
-        <p class="answer-option">D)</p>
-        <p class="answer-text" data-number="4">4</p>
-      </div>
-    </div>
-    <div class="game-controls">
-      <button id="start-btn" class="start-button hidden">Start</button>
-      <button id="next-btn" class="next-btn hidden">Next</button>
-    </div>
-  </div>
-    
   </section>
 <script src="js/script.js" ></script>
 </body>
