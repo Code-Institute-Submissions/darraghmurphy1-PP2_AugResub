@@ -10,18 +10,19 @@
 </head>
 
 <body>
-<section>
 
-  
- <div class="container">
-
-
-  <button id="rules-btn" class="rules-button">Rules</button>
-
-  <div class="rules-box hide" id="instructions">
-    
+  <section>
+    <div class="quiz-header">
+      <h2>Sports Quiz</h2>
+      <button id="rules-btn" class="rules-button">Rules
+      </button>
+    </div>
+  </section>
+<section>  
+<div class="rules-box hide" id="instructions">
     <div class="the-rules">
-      <ul>
+      <h2>Instructions</h2>
+      <ul class="rules-list">
         <li>Welcome to the quiz! Here your sporting knowledge will be tested across a range of sports.</li>
         <li>There is a time limit of X seconds so don't take too long on any questions.</li> 
         <li>Your score will be calculated below the answers so you can track your progress.</li> 
@@ -30,28 +31,29 @@
         <li>Enjoy the quiz and feel free to retry!</li>          
       </ul>
       <div class="buttonstart">
-
-      <button class="start-btn" id="start-btn" onclick=" displayQuestion(questions, questionNumber)">Begin!</button>
+      <button class="start-btn" id="start-btn">Begin!</button>
       </div>
-    
     </div>
-  
   </div>
-  <div class="quesionarea" id="questionarea">
-
+</section>
+<section>
+  <div class="quesion-area hide" id="questionarea">
   <div class="question-container">
     <div class="question-header">
       <h2>Welcome to the Sports Quiz</h2>
     </div>
     <div class="timer">
-      <h2>Time Remaining: </h2>
+      <h3>Time Remaining: </h3>
     </div>
-    <div id="question">
-    </div>
-    <div id="answer">
+    <div id="question">Question</div>
+    <div id="answer-buttons" class="btn-grid">
+      <button class="btn">Answer 1</button>
+      <button class="btn">Answer 2</button>
+      <button class="btn">Answer 3</button>
+      <button class="btn">Answer 4</button>
     </div>
     <div class="nextbutton">
-    <button id="next-btn" class="next-click">
+    <button id="next-btn" class="next-click">Next</button>
     </div>
     <div class="scoreboard">
       <p class="plusone">Correct
@@ -70,6 +72,18 @@
   </div>
 
   </section>
+  <div class="try-quiz hide" id="try">
+    <div class="message">
+      <h2>YOUR FINAL ASSESSMENT
+      </h2> 
+    </div>
+    <div id="score" class="final-score">
+    </div>
+    <div class="button">
+      <button id="retry-btn">Try Again
+      </button>
+    </div>
+  </div>
 <script src="js/script.js" ></script>
 </body>
 
