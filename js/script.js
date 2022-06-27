@@ -129,7 +129,7 @@ const questions = [
 {
   question: 'In American Football, who is the Superbowl trophy named after?',
   answers: [
-    {text: 'Paul Brown',correct: false},
+    { text: 'Paul Brown',correct: false},
     { text: 'Marv Levy', correct: false },
     { text: 'George Allen', correct: false},
     { text: 'Vince Lombardi', correct: true }
@@ -209,7 +209,6 @@ function startGame() {
   questionArea.classList.remove('hide')
   setNextQuestion();
   endQuiz();
-
 }
 
 
@@ -220,7 +219,7 @@ function setNextQuestion() {
 }
 
 
-// displaying questions
+// displaying questions and sending correct and wrong answers to the classes
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
@@ -234,7 +233,6 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button)
   })
 }
-
 
 //reseting the classes etc 
 function resetState() {
@@ -263,7 +261,6 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct');
-    totalScoreAchieved+=0.5;
   } else {
     element.classList.add('wrong')
   }
@@ -272,20 +269,16 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
-}
+} 
 
-function scoreCounter () {
-  if (answer===true) {
-    totalScoreAchieved+1;
-  }
-}
+
+
 
 function endQuiz() {
    if (currentQuestionIndex === 10) {
     runFinalScore ();
   }
 }
-
 // final score button to appear 
 let finalScore = document.getElementById('final-score')
 function runFinalScore () {
