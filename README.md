@@ -1,108 +1,154 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome darraghmurphy1,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+# Sports Quiz
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+am i responsice 
 
-`python3 -m http.server`
+Sports Quiz is a web application created with HTML, CSS and JavaScript. It aims to test sporting knowledge across a wide range of sports and for enjoyment. The quiz will teach the user a few things they did not know about sport and also reaffirm what they do know. 
 
-A blue button should appear to click: _Make Public_,
+- User Stories
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+| User Story | Acceptance Criteria |
+| ----------- | ----------- |
+| As a user I want to be able to easily navigate the quiz | The quiz has clear instructions on how to move from point to point. |
+| As a user I want to know when I am right or wrong | The user will be notified if they are right or wrong by selecting the answer and being met with red or green. |
+| The user should be able to use an array of different sized devices | The site is fully responsive and reacts to different screen sizes without sacrificing content or integrity |
+| As a user I want all links to work | All links are working proper |
+| As a user I want to understand the rules of the quiz | The rules are clearly displayed when the rules button is clicked |
+| As a user I want to trust the information that is being displayed to me |
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Site Skeleton
 
-To log into the Heroku toolbelt CLI:
+I used the software Balsamiq to draw up simple wireframes to help with the design of the site. The following screenshots show the desktop browser and mobile browser (iPhone 5) for the index page, gallery and contact us page.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Screenshots of the site
 
-------
+## Features
 
-## Release History
+- Homepage
+ 
+picture of homepage
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The homepage is fully responsive and allows access to the rules and quiz.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+The Homepage is nicely coloured and has clear offset from the background to the content.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Rules 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+A javascript function that displays the rules when they are clicked. The rules button disappears when clicked and the rules are displayed. When the begin button is pressed the rules will disappear and the quiz will start.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- Quiz 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The quiz is simple and consistent and took major inspiration from the WebDevSimplified youtube page. It displays the question and then has four answer buttons with one correct answer and 3 incorrect answers. When the incorrect option is chosen the color will go red and when it is correct the colour will go green. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Timer 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+There is a 5 minute (300 second) timer operated by javascript. When the clock reaches 0 the page will refresh and the user will need to restart the quiz.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- Features left to implement 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Unfortunatly, there are a lot of features I would have liked to implement but due to time constraints and general inexperience with javascript i was unable to feature them in this project. 
+I would have liked to have a score counter and also a final score at the end of the quiz. I would have liked to animate the page with various javascript. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Testing 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Index
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Media | All images load correctly and are consistent with the theme of the site | Pass |
+| Responsiveness | Site works on different sized screens from iPhone 5 to Desktop| Pass |
+| Links to quiz | The Link correctly goes to the advertised page with no broken links | Pass |
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
 
-## FAQ about the uptime script
+Accessability and Performance
+lighthouse picture
 
-**Why have you added this script?**
+### Quiz
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | -------- |
+| Responsiveness | Site works on different sized screens from iPhone 5 to Desktop| Pass |
+| Rules Button | The rules button starts the js function and displays the rules | Pass |
+| Begin Button | The begin button starts the quiz | Pass |
+| Answer buttons | All answer buttons give a response for correct/incorrect | Pass |
+| Next button | After answering question the next button appears to go on to next question | Pass |
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Accessability and Performance
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+- All pages tested in Safari, Google Chrome and Firefox and on various screen sizes using Google Chrome DevTools.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Validator Testing
 
-**Can I opt out?**
+- HTML Testing 
+![chrome_YErmDcHjyg](https://user-images.githubusercontent.com/103134533/175967655-b1e2a9cd-24b7-4445-b319-629abd932d76.png)
+![chrome_UTfIQ2BZnY](https://user-images.githubusercontent.com/103134533/175967848-5ad57147-3227-4fb6-9634-0c2eea4fb3d5.png)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- CSS 
+![chrome_YX2YwU3MNn](https://user-images.githubusercontent.com/103134533/175967899-dbbb19ac-2814-4a9e-a03d-28887a82436e.png)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- Javascript JShint 
+![chrome_lXwEiV9yTU](https://user-images.githubusercontent.com/103134533/175967961-2217fc7b-5980-42d5-a2d2-4ed343e44676.png)
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
 
-Happy coding!
+## Deployment
+
+I used GitHub to publish the site by doing the following:
+- Log into GitHub
+- Access repository
+- Click on the pages tab in settings
+- Click on main branch and save
+- You will be provided with a link to the live site
+https://darraghmurphy1.github.io/PP2/
+
+
+
+
+## Performace 
+![chrome_PQcA3SV6kd](https://user-images.githubusercontent.com/103134533/169141850-4dbf15b0-ee72-4f64-b41e-0824c2716c4e.png)
+
+## Technology Used
+
+HTML 5
+
+CSS
+
+JavaScript 
+
+GitHub
+
+Gitpod 
+
+Balsamic
+
+W3C Markup and Jigsaw validation tools
+
+Google Chrome
+
+Youtube
+
+## Credits
+
+- W3 Schools
+- HTML, JS and CSS used from Code Institute modules
+- Thank you to my mentor Marcel for various corrections and guidance
+- Wireframes were created in Balsamiq
+- Testing was done by Google Lighthouse
+- WebDevSimplified youtube 
+
+
+
+
