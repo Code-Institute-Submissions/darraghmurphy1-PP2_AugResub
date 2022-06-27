@@ -18,7 +18,7 @@ Sports Quiz is a web application created with HTML, CSS and JavaScript. It aims 
 | The user should be able to use an array of different sized devices | The site is fully responsive and reacts to different screen sizes without sacrificing content or integrity |
 | As a user I want all links to work | All links are working proper |
 | As a user I want to understand the rules of the quiz | The rules are clearly displayed when the rules button is clicked |
-| As a user I want to trust the information that is being displayed to me |
+
 
 
 
