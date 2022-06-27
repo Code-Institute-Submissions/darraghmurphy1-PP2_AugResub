@@ -7,9 +7,7 @@ const questionElement = document.getElementById('question');
 const startButton = document.getElementById('start-btn');
 const TIMEOUT = 300;
 const nextButton = document.getElementById('next-btn');
-let rightAnswerCount = 0;
-let wrongAnswerCount = 0;
-let totalScore = 0;
+
 /* questions for the quiz */
 
 
@@ -18,27 +16,27 @@ const questions = [
   {
     question: 'What was the name of the French football player who was infamously sent off in the 2006 World Cup Final?',
     answers: [
-      { text: 'Zinedine Zidane', correct: true },
+      { text: 'Thierry Henry',correct: false},
       { text: 'William Gallas', correct: false },
       { text: 'Frank Ribery', correct: false},
-      { text: 'Thierry Henry',correct: false}
+      { text: 'Zinedine Zidane', correct: true }
     ] 
   },
 
   {
     question: 'The only city to have hosted both the Summer and Winter Olympic Games is which of the following?',
     answers: [
-      { text: 'Beijing', correct: true },
-      { text: 'Moscow', correct: false },
       { text: 'Helsinki', correct: false},
+      { text: 'Moscow', correct: false },
+      { text: 'Beijing', correct: true }, 
       { text: 'Montreal',correct: false}
     ] 
   },
   {
     question: 'Who was the first team to win the FA Cup?',
     answers: [
-      { text: 'Wanderers', correct: true },
       { text: 'Maidenhead', correct: false },
+      { text: 'Wanderers', correct: true },
       { text: 'Queens Park', correct: false},
       { text: 'Crystal Palace',correct: false}
     ] 
@@ -55,18 +53,18 @@ const questions = [
   {
     question: 'Who won the very first UFC tournament (now known as UFC 1)?',
     answers: [
-      { text: 'Royce Gracie', correct: true },
+      { text: 'Gerard Gordeau',correct: false},
       { text: 'Ken Shamrock', correct: false },
       { text: 'Art Jimmerson', correct: false},
-      { text: 'Gerard Gordeau',correct: false}
+      { text: 'Royce Gracie', correct: true }
     ] 
   },
   {
     question: 'Who did Michael Schumacher win his first F1 World Drivers Championship?',
     answers: [
-      { text: 'Benetton', correct: true },
-      { text: 'Jordan', correct: false },
       { text: 'Minardi', correct: false},
+      { text: 'Jordan', correct: false }, 
+      { text: 'Benetton', correct: true },
       { text: 'Ferrari',correct: false}
     ] 
   },
@@ -92,8 +90,8 @@ const questions = [
   {
     question: 'Which is the smallest area by population represented by a football team to win the European Cup/Champions League?',
     answers: [
-      { text: 'Porto', correct: true },
       { text: 'Nottingham', correct: false },
+      { text: 'Porto', correct: true },
       { text: 'Belgrade', correct: false},
       { text: 'Salzburg',correct: false}
     ] 
@@ -130,10 +128,10 @@ const questions = [
 {
   question: 'In American Football, who is the Superbowl trophy named after?',
   answers: [
-    { text: 'Vince Lombardi', correct: true },
+    {text: 'Paul Brown',correct: false},
     { text: 'Marv Levy', correct: false },
     { text: 'George Allen', correct: false},
-    { text: 'Paul Brown',correct: false}
+    { text: 'Vince Lombardi', correct: true }
   ] 
 },
 
@@ -150,10 +148,10 @@ const questions = [
 {
   question: 'Who was the first footballer to be bought for over £10,000,000?',
   answers: [
-    { text: 'Jean-Pierre Papin', correct: true },
+    { text: 'Gianluca Vialli',correct: false},
     { text: 'Alan Shearer', correct: false },
     { text: 'Ronaldo', correct: false},
-    { text: 'Gianluca Vialli',correct: false}
+    { text: 'Jean-Pierre Papin', correct: true}
   ] 
 },
 
@@ -188,30 +186,37 @@ setInterval(() => {
 }, 1000);
 
 
-/*questions to display */
-
+//*questions to display 
+// https://github.com/WebDevSimplified/JavaScript-Quiz-App i used this heavily for help in trying to get the quiz to work
 
 let shuffledQuestions, currentQuestionIndex
 
+// adding event listener to start the game 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
 
+
+// funstion to start the game by hiding the start button and randomly shuffling the questions
 function startGame() {
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
-  currentQuestionIndex = 0
+  currentQuestionIndex = 0;
   questionArea.classList.remove('hide')
   setNextQuestion()
 }
 
+
+// the following question set up 
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
+
+// displaying questions
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
@@ -220,16 +225,14 @@ function showQuestion(question) {
     button.classList.add('btn')
     if (answer.correct) {
       button.dataset.correct = answer.correct;
-      incrementCorrectScore+=1;
-      totalScore+=1;
-    } else {
-      incrementIncorrectScore+=1;
-    }
+    } 
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
   })
 }
 
+
+//reseting the classes etc 
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
@@ -237,6 +240,8 @@ function resetState() {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
 }
+
+
 
 function selectAnswer(e) {
   const selectedButton = e.target
@@ -268,14 +273,8 @@ function clearStatusClass(element) {
 }
 
 
-
-function incrementCorrectScore(rightAnswerCount) {
-  document.getElementById("correct").innerText = rightAnswerCount;
-
+// i wanted to have a final score but have struggled in the time frame. instead when the timer runs out the page will reload
+function runFinalScore () {
+  window.location.reload()
 }
 
-// increament score for wrong answers
-function incrementIncorrectScore(wrongAnswerCount) {
-  document.getElementById("incorrect").innerText = wrongAnswerCount;
-
-}
