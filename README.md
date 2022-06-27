@@ -24,7 +24,11 @@ Sports Quiz is a web application created with HTML, CSS and JavaScript. It aims 
 
 ## Site Skeleton
 
-I used the software Balsamiq to draw up simple wireframes to help with the design of the site. The following screenshots show the desktop browser and mobile browser (iPhone 5) for the index page, gallery and contact us page.
+I used the software Balsamiq to draw up simple wireframes to help with the design of the site. The following screenshots show the desktop browser and mobile browser (iPhone 5) for the quiz.
+
+![BalsamiqWireframes_1j4fiW7ZT7](https://user-images.githubusercontent.com/103134533/175974374-706c0b50-2ced-4da5-b087-a1db8884045c.png)
+![BalsamiqWireframes_aGOvvGGHHN](https://user-images.githubusercontent.com/103134533/175974381-303f6fd0-171b-4052-a18d-95e45a21063c.png)
+
 
 
 ## Screenshots of the site
