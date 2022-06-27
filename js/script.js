@@ -5,8 +5,9 @@ const ruleBox = document.getElementById('instructions');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const questionElement = document.getElementById('question');
 const startButton = document.getElementById('start-btn');
-const TIMEOUT = 300;
+const TIMEOUT = 75;
 const nextButton = document.getElementById('next-btn');
+let totalScoreAchieved = 0;
 
 /* questions for the quiz */
 
@@ -195,7 +196,8 @@ let shuffledQuestions, currentQuestionIndex
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
-  setNextQuestion()
+  setNextQuestion();
+  endQuiz();
 })
 
 
@@ -205,7 +207,9 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0;
   questionArea.classList.remove('hide')
-  setNextQuestion()
+  setNextQuestion();
+  endQuiz();
+
 }
 
 
@@ -252,16 +256,14 @@ function selectAnswer(e) {
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
-  } else {
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
-  }
+  } 
 }
 
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
-    element.classList.add('correct')
+    element.classList.add('correct');
+    totalScoreAchieved+=0.5;
   } else {
     element.classList.add('wrong')
   }
@@ -272,9 +274,39 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
-
-// i wanted to have a final score but have struggled in the time frame. instead when the timer runs out the page will reload
-function runFinalScore () {
-  window.location.reload()
+function scoreCounter () {
+  if (answer===true) {
+    totalScoreAchieved+1;
+  }
 }
 
+function endQuiz() {
+   if (currentQuestionIndex === 10) {
+    runFinalScore ();
+  }
+}
+
+// final score button to appear 
+let finalScore = document.getElementById('final-score')
+function runFinalScore () {
+  questionArea.classList.add('hide');
+  finalScore.classList.remove('hide');
+}
+
+let displayScore = document.getElementById('displayfinalscore');
+let finalButton = document.getElementById('finalscorebtn');
+const retryButton = document.getElementById('retry')
+// discover final score 
+function showFinalScore() {
+  finalButton.classList.add('hide');
+  finalScore.classList.add('hide');
+  displayScore.classList.remove('hide');
+  displayScore.classList.add('style-score');
+  displayScore.innerText = `You achieved a score of ${totalScoreAchieved} out of 10`;
+  retryButton.classList.remove('hide');
+
+}
+
+function retry() {
+  window.location.reload();
+}

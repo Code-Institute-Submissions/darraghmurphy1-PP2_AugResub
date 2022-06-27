@@ -25,8 +25,8 @@
       <!--unordered list containing rules-->
       <ul class="rules-list">
         <li>Welcome to the quiz! Here your sporting knowledge will be tested across a range of sports.</li>
-        <li>There is a time limit of 300 seconds (5 minutes) so don't take too long on any questions.</li> 
-        <li>Your score will be calculated below the answers so you can track your progress.</li> 
+        <li>There is a time limit of 75 seconds so don't take too long on any questions.</li> 
+        <li>Your score will be calculated when the timer runs out.</li> 
         <li>Use your mouse to select your answer or tap your answer on your touch screen.</li> 
         <li>You cannot pass on a question and must answer the current question to move onto the next one.</li> 
         <li>Enjoy the quiz and feel free to retry!</li>          
@@ -58,10 +58,18 @@
     <div class="nextbutton">
     <button id="next-btn" class="next-click">Next</button>
     </div>
-    
-
-
   </div>
+  <div class="scorecounter hide" id="scorecount"><span id="counter">0</span><span>/15</span></div>
+  
+  </div>
+
+  <div class="finalscore hide" id="final-score">
+    <button id="finalscorebtn" class="fnlbtn" onclick=showFinalScore()>Click here to see your score!</button>
+  </div>
+  <div id="displayfinalscore" class=" displayscore hide"></div>
+
+  <div class="retrybtn">
+    <button class="hide" onclick="retry ()" id="retry">Retry?</button>
   </div>
 
  

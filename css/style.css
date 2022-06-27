@@ -1,3 +1,4 @@
+/* https://github.com/WebDevSimplified/JavaScript-Quiz-App i used this heavily for help in trying to get the quiz to work*/
 
 .container {
     text-align: center;
@@ -124,7 +125,7 @@
   
   #next-btn {
     
-    background-color: silver;
+    background-color: yellow;
     color: black;
   }
 
@@ -134,4 +135,10 @@
       margin: 5px ;
       margin-right:5px;
     }
+  }
+
+  .displayscore {
+    font-size: 18pt;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
