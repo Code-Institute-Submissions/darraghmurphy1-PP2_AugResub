@@ -4,7 +4,7 @@
 
 # Sports Quiz
 
-am i responsice 
+![chrome_W61ICCfhWU](https://user-images.githubusercontent.com/103134533/175970373-0cdf872c-4970-4e8f-bb95-e9690a6dd634.png)
 
 Sports Quiz is a web application created with HTML, CSS and JavaScript. It aims to test sporting knowledge across a wide range of sports and for enjoyment. The quiz will teach the user a few things they did not know about sport and also reaffirm what they do know. 
 
@@ -33,17 +33,19 @@ I used the software Balsamiq to draw up simple wireframes to help with the desig
 
 - Homepage
  
-picture of homepage
+![chrome_lzhQUox7Lh](https://user-images.githubusercontent.com/103134533/175970407-f3b34801-bde3-4fb8-9089-eb07e6da223d.png)
 
 The homepage is fully responsive and allows access to the rules and quiz.
 
 The Homepage is nicely coloured and has clear offset from the background to the content.
 
 - Rules 
+![chrome_HjgdNYuYx6](https://user-images.githubusercontent.com/103134533/175970470-bf3cb885-ba1f-4eec-af19-b24a1dee06cb.png)
 
 A javascript function that displays the rules when they are clicked. The rules button disappears when clicked and the rules are displayed. When the begin button is pressed the rules will disappear and the quiz will start.
 
 - Quiz 
+![chrome_SVmhPWEcdl](https://user-images.githubusercontent.com/103134533/175970509-143a8db1-9cd3-4ced-ab7b-2e4b0b0a522b.png)
 
 The quiz is simple and consistent and took major inspiration from the WebDevSimplified youtube page. It displays the question and then has four answer buttons with one correct answer and 3 incorrect answers. When the incorrect option is chosen the color will go red and when it is correct the colour will go green. 
 
@@ -70,7 +72,8 @@ I would have liked to have a score counter and also a final score at the end of 
 
 
 Accessability and Performance
-lighthouse picture
+![chrome_aIezEWaFGs](https://user-images.githubusercontent.com/103134533/175970573-f3ffcc99-2ce3-46fa-997a-f089ab3ec1ff.png)
+
 
 ### Quiz
 
@@ -79,12 +82,17 @@ lighthouse picture
 | ----------- | ----------- | -------- |
 | Responsiveness | Site works on different sized screens from iPhone 5 to Desktop| Pass |
 | Rules Button | The rules button starts the js function and displays the rules | Pass |
+| Rules Button hide | rules button is hidden on click due to js function | Pass |
 | Begin Button | The begin button starts the quiz | Pass |
+| Rules Button hide | beguin button is hidden on click due to js function | Pass |
+| Question area unhide | question are is visable | Pass |
 | Answer buttons | All answer buttons give a response for correct/incorrect | Pass |
-| Next button | After answering question the next button appears to go on to next question | Pass |
+| Next button | After answering question the next button appears to go on to next question | Pass | 
+| Question shuffle | Questions appear in a different order every time | Pass |
 
 
 Accessability and Performance
+![chrome_5bwZxc6fPA](https://user-images.githubusercontent.com/103134533/175970638-e591b232-5b95-43af-a13b-8928d2211a7c.png)
 
 
 - All pages tested in Safari, Google Chrome and Firefox and on various screen sizes using Google Chrome DevTools.
@@ -148,6 +156,7 @@ Youtube
 - Wireframes were created in Balsamiq
 - Testing was done by Google Lighthouse
 - WebDevSimplified youtube 
+- https://github.com/dhakal79/Portfolio-project-MS2
 
 
 
