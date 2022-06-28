@@ -109,6 +109,7 @@ body.wrong {
 ul {
   text-decoration: none;
   color: white;
+  list-style: none;
 }
 
 h1 {

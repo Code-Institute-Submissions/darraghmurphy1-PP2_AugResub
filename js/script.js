@@ -7,7 +7,6 @@ const questionElement = document.getElementById('question');
 const startButton = document.getElementById('start-btn');
 const TIMEOUT = 75;
 const nextButton = document.getElementById('next-btn');
-let totalScoreAchieved = 0;
 
 /* questions for the quiz */
 
@@ -161,14 +160,14 @@ const questions = [
 rulesButton.addEventListener('click', function() {
   ruleBox.setAttribute('class', 'the-rules');
   rulesButton.classList.add('hide');
-})
+});
 
 /* function to start the quiz after reading rules */
 startButton.addEventListener("click", function() {
   ruleBox.classList.add('hide');
   questionArea.classList.remove('hide');
   startButton.classList.remove("hide");
-})
+});
 
 
 /* 5 MIMUTE TIMER FOR THE QUIZ */
@@ -190,23 +189,25 @@ setInterval(() => {
 //*questions to display 
 // https://github.com/WebDevSimplified/JavaScript-Quiz-App i used this heavily for help in trying to get the quiz to work
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex;
+var totalScoreAchieved;
 
 // adding event listener to start the game 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
+  currentQuestionIndex++;
   setNextQuestion();
   endQuiz();
-})
+});
 
 
 // funstion to start the game by hiding the start button and randomly shuffling the questions
 function startGame() {
-  startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  startButton.classList.add('hide');
+  shuffledQuestions = questions.sort(() => Math.random() - .5);
   currentQuestionIndex = 0;
-  questionArea.classList.remove('hide')
+  totalScoreAchieved = 0;
+  questionArea.classList.remove('hide');
   setNextQuestion();
   endQuiz();
 }
@@ -214,63 +215,63 @@ function startGame() {
 
 // the following question set up 
 function setNextQuestion() {
-  resetState()
-  showQuestion(shuffledQuestions[currentQuestionIndex])
+  resetState();
+  showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
 
 // displaying questions and sending correct and wrong answers to the classes
 function showQuestion(question) {
-  questionElement.innerText = question.question
+  questionElement.innerText = question.question;
   question.answers.forEach(answer => {
-    const button = document.createElement('button')
-    button.innerText = answer.text
-    button.classList.add('btn')
+    const button = document.createElement('button');
+    button.innerText = answer.text;
+    button.classList.add('btn');
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     } 
-    button.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(button)
-  })
+    button.addEventListener('click', selectAnswer);
+    answerButtonsElement.appendChild(button);
+  });
 }
 
 //reseting the classes etc 
 function resetState() {
-  clearStatusClass(document.body)
-  nextButton.classList.add('hide')
+  clearStatusClass(document.body);
+  nextButton.classList.add('hide');
   while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
 
 
 // select answer to send to classes and to make next button appear
 function selectAnswer(e) {
-  const selectedButton = e.target
-  const correct = selectedButton.dataset.correct
-  setStatusClass(document.body, correct)
+  const selectedButton = e.target;
+  const correct = selectedButton.dataset.correct;
+  setStatusClass(document.body, correct);
   Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct)
-  })
+    setStatusClass(button, button.dataset.correct);
+  });
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove('hide')
+    nextButton.classList.remove('hide');
   } 
 }
 
 function setStatusClass(element, correct) {
-  clearStatusClass(element)
+  clearStatusClass(element);
   if (correct) {
-    element.classList.add('correct');
+    totalScoreAchieved+=1;
+    element.classList.add('correct')
   } else {
-    element.classList.add('wrong')
+    element.classList.add('wrong');
   }
 }
 
 function clearStatusClass(element) {
-  element.classList.remove('correct')
-  element.classList.remove('wrong')
+  element.classList.remove('correct');
+  element.classList.remove('wrong');
 } 
-
 
 
 // to run after 10 questions or timeout
@@ -280,7 +281,7 @@ function endQuiz() {
   }
 }
 // final score button to appear 
-let finalScore = document.getElementById('final-score')
+let finalScore = document.getElementById('final-score');
 function runFinalScore () {
   rulesButton.classList.add('hide');
   questionArea.classList.add('hide');
@@ -289,14 +290,14 @@ function runFinalScore () {
 
 let displayScore = document.getElementById('displayfinalscore');
 let finalButton = document.getElementById('finalscorebtn');
-const retryButton = document.getElementById('retry')
+const retryButton = document.getElementById('retry');
 // discover final score 
 function showFinalScore() {
   finalButton.classList.add('hide');
   finalScore.classList.add('hide');
   displayScore.classList.remove('hide');
   displayScore.classList.add('style-score');
-  displayScore.innerText = `You achieved a score of ${totalScoreAchieved} out of 10`;
+  displayScore.innerText = `You achieved a score of ${(totalScoreAchieved-10)} out of 10`;
   retryButton.classList.remove('hide');
 
 }
@@ -304,3 +305,6 @@ function showFinalScore() {
 function retry() {
   window.location.reload();
 }
+
+
+
