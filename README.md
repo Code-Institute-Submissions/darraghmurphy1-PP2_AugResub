@@ -151,7 +151,7 @@ Gitpod
 
 Balsamic
 
-W3C Markup and Jigsaw validation tools
+W3C Markup, JShint and Jigsaw validation tools
 
 Google Chrome
 
