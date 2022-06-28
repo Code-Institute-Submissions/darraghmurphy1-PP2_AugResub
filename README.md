@@ -58,9 +58,19 @@ A javascript function that displays the rules when they are clicked. The rules b
 
 The quiz is simple and consistent and took major inspiration from the WebDevSimplified youtube page. It displays the question and then has four answer buttons with one correct answer and 3 incorrect answers. When the incorrect option is chosen the color will go red and when it is correct the colour will go green. 
 
+- Final Score 
+
+![chrome_Ub01waT7VG](https://user-images.githubusercontent.com/103134533/176134519-a25c0fef-4320-49d0-8545-7263bfd6686f.png)
+
+Final score caluculated through totalScoreAchieved displays after the quiz is over. 
+
 - Timer 
 
 There is a 5 minute (300 second) timer operated by javascript. When the clock reaches 0 the page will refresh and the user will need to restart the quiz.
+
+- Retry Button 
+
+Refreshes the page and restarts the quiz
 
 - Features left to implement 
 
@@ -99,7 +109,7 @@ Accessability and Performance
 | Next button | After answering question the next button appears to go on to next question | Pass | 
 | Question shuffle | Questions appear in a different order every time | Pass |
 | Timeout | After time is up the quiz will automatically end | Pass |
-| Final Score | The final score shows up but not reliable | Pass for display but fail for function |
+| Final Score | The final score shows up | Pass |
 
 
 Accessability and Performance
