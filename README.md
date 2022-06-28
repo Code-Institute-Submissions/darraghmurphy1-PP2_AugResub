@@ -46,7 +46,9 @@ The homepage is fully responsive and allows access to the rules and quiz.
 The Homepage is nicely coloured and has clear offset from the background to the content.
 
 - Rules 
-![chrome_HjgdNYuYx6](https://user-images.githubusercontent.com/103134533/175970470-bf3cb885-ba1f-4eec-af19-b24a1dee06cb.png)
+
+![chrome_Vv9lFm0wxg](https://user-images.githubusercontent.com/103134533/176123454-587fbd7e-0796-44d1-95c8-7c017d9cdd99.png)
+
 
 A javascript function that displays the rules when they are clicked. The rules button disappears when clicked and the rules are displayed. When the begin button is pressed the rules will disappear and the quiz will start.
 
