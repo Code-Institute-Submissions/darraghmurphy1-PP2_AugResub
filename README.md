@@ -98,8 +98,8 @@ Accessability and Performance
 | Answer buttons | All answer buttons give a response for correct/incorrect | Pass |
 | Next button | After answering question the next button appears to go on to next question | Pass | 
 | Question shuffle | Questions appear in a different order every time | Pass |
-| Timeout | After time is up the quiz will automatically end | 
-| Final Score | The final score shows up but not reliable |
+| Timeout | After time is up the quiz will automatically end | Pass |
+| Final Score | The final score shows up but not reliable | Pass for display but fail for function |
 
 
 Accessability and Performance
