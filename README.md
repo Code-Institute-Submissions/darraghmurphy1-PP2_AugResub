@@ -18,6 +18,8 @@ Sports Quiz is a web application created with HTML, CSS and JavaScript. It aims 
 | The user should be able to use an array of different sized devices | The site is fully responsive and reacts to different screen sizes without sacrificing content or integrity |
 | As a user I want all links to work | All links are working proper |
 | As a user I want to understand the rules of the quiz | The rules are clearly displayed when the rules button is clicked |
+| After the quiz I want to easily replay | Clear retry button on completion to restart the quiz. |
+
 
 
 
@@ -93,6 +95,8 @@ Accessability and Performance
 | Answer buttons | All answer buttons give a response for correct/incorrect | Pass |
 | Next button | After answering question the next button appears to go on to next question | Pass | 
 | Question shuffle | Questions appear in a different order every time | Pass |
+| Timeout | After time is up the quiz will automatically end | 
+| Final Score | The final score shows up but not reliable |
 
 
 Accessability and Performance
@@ -126,11 +130,6 @@ I used GitHub to publish the site by doing the following:
 - You will be provided with a link to the live site
 https://darraghmurphy1.github.io/PP2/
 
-
-
-
-## Performace 
-![chrome_PQcA3SV6kd](https://user-images.githubusercontent.com/103134533/169141850-4dbf15b0-ee72-4f64-b41e-0824c2716c4e.png)
 
 ## Technology Used
 
