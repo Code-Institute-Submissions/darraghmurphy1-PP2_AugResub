@@ -4,7 +4,7 @@
 
 # Sports Quiz
 
-![chrome_YG0gFJP9yY](https://user-images.githubusercontent.com/103134533/176125404-c4056b7f-3772-4001-bb44-56b9d0e52f61.png)
+![chrome_WPkFWzPqU4](https://user-images.githubusercontent.com/103134533/176139661-af6358aa-a973-4f4c-9a77-2ae9b292f418.png)
 
 
 Sports Quiz is a web application created with HTML, CSS and JavaScript. It aims to test sporting knowledge across a wide range of sports and for enjoyment. The quiz will teach the user a few things they did not know about sport and also reaffirm what they do know. 
@@ -20,6 +20,7 @@ Sports Quiz is a web application created with HTML, CSS and JavaScript. It aims 
 | As a user I want all links to work | All links are working proper |
 | As a user I want to understand the rules of the quiz | The rules are clearly displayed when the rules button is clicked |
 | After the quiz I want to easily replay | Clear retry button on completion to restart the quiz. |
+| I want to see relevent media | Pictures etc that match the tone of the site |
 
 
 
@@ -74,8 +75,7 @@ Refreshes the page and restarts the quiz
 
 - Features left to implement 
 
-Unfortunatly, there are a lot of features I would have liked to implement but due to time constraints and general inexperience with javascript i was unable to feature them in this project. 
-I would have liked to have a score counter and also a final score at the end of the quiz. I would have liked to animate the page with various javascript. 
+I would have liked to implement a score tracker as the questions go on and also an alert to give the user information about the question they just answered.
 
 
 ## Testing 
