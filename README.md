@@ -110,14 +110,17 @@ Accessability and Performance
 ## Validator Testing
 
 - HTML Testing 
+- 
 ![chrome_YErmDcHjyg](https://user-images.githubusercontent.com/103134533/175967655-b1e2a9cd-24b7-4445-b319-629abd932d76.png)
 ![chrome_UTfIQ2BZnY](https://user-images.githubusercontent.com/103134533/175967848-5ad57147-3227-4fb6-9634-0c2eea4fb3d5.png)
 
 - CSS 
+- 
 ![chrome_YX2YwU3MNn](https://user-images.githubusercontent.com/103134533/175967899-dbbb19ac-2814-4a9e-a03d-28887a82436e.png)
 
 - Javascript JShint 
-![chrome_lXwEiV9yTU](https://user-images.githubusercontent.com/103134533/175967961-2217fc7b-5980-42d5-a2d2-4ed343e44676.png)
+
+![chrome_OfI3nxUwIp](https://user-images.githubusercontent.com/103134533/176124587-7e069ea0-0361-439a-aecf-9fbed4d1d0de.png)
 
 
 
