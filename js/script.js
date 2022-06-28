@@ -244,7 +244,7 @@ function resetState() {
 }
 
 
-
+// select answer to send to classes and to make next button appear
 function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
@@ -273,7 +273,7 @@ function clearStatusClass(element) {
 
 
 
-
+// to run after 10 questions or timeout
 function endQuiz() {
    if (currentQuestionIndex === 10) {
     runFinalScore ();
@@ -282,6 +282,7 @@ function endQuiz() {
 // final score button to appear 
 let finalScore = document.getElementById('final-score')
 function runFinalScore () {
+  rulesButton.classList.add('hide');
   questionArea.classList.add('hide');
   finalScore.classList.remove('hide');
 }
@@ -299,7 +300,7 @@ function showFinalScore() {
   retryButton.classList.remove('hide');
 
 }
-
+// refresh the webpage to restart the quiz 
 function retry() {
   window.location.reload();
 }
