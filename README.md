@@ -104,7 +104,7 @@ Accessability and Performance
 | Rules Button hide | rules button is hidden on click due to js function | Pass |
 | Begin Button | The begin button starts the quiz | Pass |
 | Rules Button hide | beguin button is hidden on click due to js function | Pass |
-| Question area unhide | question are is visable | Pass |
+| Question area unhide | question area is visable | Pass |
 | Answer buttons | All answer buttons give a response for correct/incorrect | Pass |
 | Next button | After answering question the next button appears to go on to next question | Pass | 
 | Question shuffle | Questions appear in a different order every time | Pass |
