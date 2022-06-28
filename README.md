@@ -4,7 +4,8 @@
 
 # Sports Quiz
 
-![chrome_W61ICCfhWU](https://user-images.githubusercontent.com/103134533/175970373-0cdf872c-4970-4e8f-bb95-e9690a6dd634.png)
+![chrome_YG0gFJP9yY](https://user-images.githubusercontent.com/103134533/176125404-c4056b7f-3772-4001-bb44-56b9d0e52f61.png)
+
 
 Sports Quiz is a web application created with HTML, CSS and JavaScript. It aims to test sporting knowledge across a wide range of sports and for enjoyment. The quiz will teach the user a few things they did not know about sport and also reaffirm what they do know. 
 
