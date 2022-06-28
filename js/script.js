@@ -261,7 +261,7 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
-    totalScoreAchieved+=1;
+    totalScoreAchieved+=1; // for the final score calculater at the end 
     element.classList.add('correct')
   } else {
     element.classList.add('wrong');
@@ -297,7 +297,7 @@ function showFinalScore() {
   finalScore.classList.add('hide');
   displayScore.classList.remove('hide');
   displayScore.classList.add('style-score');
-  displayScore.innerText = `You achieved a score of ${(totalScoreAchieved-10)} out of 10`;
+  displayScore.innerText = `You achieved a score of ${(totalScoreAchieved-10)} out of 10`; // final score caluclator 
   retryButton.classList.remove('hide');
 
 }
