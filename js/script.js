@@ -191,6 +191,9 @@ setInterval(() => {
 
 let shuffledQuestions, currentQuestionIndex;
 var totalScoreAchieved;
+let questionScoreCounter = {
+  1: null, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null, 8: null, 9: null, 10: null,
+};
 
 // adding event listener to start the game 
 startButton.addEventListener('click', startGame);
@@ -207,6 +210,9 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - .5);
   currentQuestionIndex = 0;
   totalScoreAchieved = 0;
+  questionScoreCounter = {
+    1: null, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null, 8: null, 9: null, 10: null,
+  };
   questionArea.classList.remove('hide');
   setNextQuestion();
   endQuiz();
@@ -261,10 +267,16 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
-    totalScoreAchieved+=1; // for the final score calculater at the end 
     element.classList.add('correct')
+    totalScoreAchieved++; // for the final score calculater at the end 
+    if (questionScoreCounter[(currentQuestionIndex+1)] === null) {
+      questionScoreCounter[(currentQuestionIndex+1)] = 1;
+    } 
   } else {
     element.classList.add('wrong');
+    if (questionScoreCounter[(currentQuestionIndex+1)] === null) {
+      questionScoreCounter[(currentQuestionIndex+1)] = 0;
+    } 
   }
 }
 
@@ -293,11 +305,15 @@ let finalButton = document.getElementById('finalscorebtn');
 const retryButton = document.getElementById('retry');
 // discover final score 
 function showFinalScore() {
+  totalScoreAchieved = 0;
+  for (let key in questionScoreCounter) {
+    totalScoreAchieved = totalScoreAchieved + questionScoreCounter[key];
+  }
   finalButton.classList.add('hide');
   finalScore.classList.add('hide');
   displayScore.classList.remove('hide');
   displayScore.classList.add('style-score');
-  displayScore.innerText = `You achieved a score of ${(totalScoreAchieved-10)} out of 10`; // final score caluclator 
+  displayScore.innerText = `You achieved a score of ${(totalScoreAchieved)} out of 10`; // final score caluclator 
   retryButton.classList.remove('hide');
 
 }
