@@ -21,6 +21,7 @@ Sports Quiz is a web application created with HTML, CSS and JavaScript. It aims 
 | As a user I want to understand the rules of the quiz | The rules are clearly displayed when the rules button is clicked |
 | After the quiz I want to easily replay | Clear retry button on completion to restart the quiz. |
 | I want to see relevent media | Pictures etc that match the tone of the site |
+| User should not be able to have a changed answer count towards score | Each question cannot be reanswered and each correct answer only counts for one singular point |
 
 
 
@@ -110,6 +111,7 @@ Accessability and Performance
 | Question shuffle | Questions appear in a different order every time | Pass |
 | Timeout | After time is up the quiz will automatically end | Pass |
 | Final Score | The final score shows up | Pass |
+| Score Test | Score counter tested for a changed answer and checked all answers only count once | Pass |
 
 
 Accessability and Performance
